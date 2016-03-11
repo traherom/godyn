@@ -38,6 +38,7 @@ docker run -it \
   --name $NAME \
   -v "/etc/ssl/certs:/etc/ssl/certs:ro" \
   -e GODYN_SERVICE \
+  -e GODYN_HOST \
   -e GODYN_USER \
   -e GODYN_PW \
   $EXTRAS \
