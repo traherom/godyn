@@ -1,0 +1,9 @@
+FROM golang:1.6
+
+ENV GOPATH "/extsrc:/mainsrc"
+VOLUME "/mainsrc/src/github.com/traherom/godyn"
+VOLUME "/extsrc/"
+ENV BUILD_ENV true
+
+WORKDIR "/mainsrc/src/github.com/traherom/godyn"
+ENTRYPOINT [ "./build.sh" ]

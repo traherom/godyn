@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+
+ENV BASEDIR "/godyn"
+COPY godyn "$BASEDIR/"
+
+WORKDIR "$BASEDIR"
+ENTRYPOINT [ "./godyn" ]
